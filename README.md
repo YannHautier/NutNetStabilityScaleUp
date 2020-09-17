@@ -3,9 +3,9 @@ Authors: Hautier Y, Zhang P, Loreau M, Wilcox KR, Seabloom EW, Borer ET, Byrnes 
 
 ## Table of Contents  
 
-**varpart_All_prod.csv**: Diversity, aynchrony and stability data at the local and larger spatial scale under unmanipulated control and fertilizaed condition.
+**varpart_All_prod.csv**: Diversity, asynchrony and stability data at the local and larger spatial scale under unmanipulated control and fertilized condition.
 
-**varpart_All_LRR_prod.csv**: Log response ratio (LRR) of diversity, aynchrony and stability data at the local and larger spatial scale under unmanipulated control and fertilizaed condition.
+**varpart_All_LRR_prod.csv**: Log response ratio (LRR) of diversity, asynchrony and stability data at the local and larger spatial scale under unmanipulated control and fertilized condition.
 
 **Bivariate_analyses.r**: Script to run the bivariate analyses.
 

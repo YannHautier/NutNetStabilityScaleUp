@@ -3,7 +3,10 @@ Authors: Hautier Y, Zhang P, Loreau M, Wilcox KR, Seabloom EW, Borer ET, Byrnes 
 
 ## Table of Contents  
 
-**Name.R**: Description.
+**varpart_All_prod.csv**: Diversity, aynchrony and stability data at the local and larger spatial scale under unmanipulated control and fertilizaed condition.
 
-**Name.csv**: Description.
+**Bivariate_analyses.r**: Script to run the bivariate analyses.
+
+**SEM_analyses.r**: Script to run the Structural Equation Model (SEM) analyses.
+
 

@@ -5,8 +5,8 @@ Authors: Hautier Y, Zhang P, Loreau M, Wilcox KR, Seabloom EW, Borer ET, Byrnes 
 
 **varpart_All_prod.csv**: Diversity, aynchrony and stability data at the local and larger spatial scale under unmanipulated control and fertilizaed condition.
 
+**varpart_All_LRR_prod.csv**: Log response ratio (LRR) of diversity, aynchrony and stability data at the local and larger spatial scale under unmanipulated control and fertilizaed condition.
+
 **Bivariate_analyses.r**: Script to run the bivariate analyses.
 
 **SEM_analyses.r**: Script to run the Structural Equation Model (SEM) analyses.
-
-

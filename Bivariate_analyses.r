@@ -32,7 +32,7 @@ cor.test(varpart_All_prod$avg_richness2, varpart_All_prod$avg_shannons)
 ###########################################
 
 jpeg('FigureS1.jpg', width = 4, height = 4, units='in', res=300)
-qplot(TEMP_VAR_v2/100, MAP_VAR_v2, data = varpart_All_prod, xlab='Temperature seasonality (°C)', ylab='Precipitation seasonality (mm)', alpha = I(0)) + theme_bw() + geom_point(size = 2)
+qplot(TEMP_VAR_v2/100, MAP_VAR_v2, data = varpart_All_prod, xlab='Temperature seasonality (Â°C)', ylab='Precipitation seasonality (mm)', alpha = I(0)) + theme_bw() + geom_point(size = 2)
 dev.off()
 system('open FigureS1.jpg')
 
@@ -74,10 +74,10 @@ anova(gls2)
 
 pdf('FigureS2.pdf', width = 8, height = 8, useDingbats=FALSE)
 grid.arrange(
-qplot(year_trt, avg_richness2, data = varpart_All_prod, xlab='Post treatment year', ylab='Species richness (m-2)', alpha = I(0)) + theme_bw() + geom_boxplot(aes(fill=trt)) + scale_fill_manual(values=c('#ffffff', '#999999')) + scale_y_continuous(breaks=c(0,1,2,3,4,5), labels=c('1','2','4','8','16','32')),
-qplot(year_trt, beta_invsimpsons, data = varpart_All_prod, xlab='Post treatment year', ylab='Beta diversity (abundance-based)', alpha = I(0)) + theme_bw() + geom_boxplot(aes(fill=trt)) + scale_fill_manual(values=c('#ffffff', '#999999')),
-qplot(year_trt, log_alpha_stab_prod, data = varpart_All_prod, xlab='Post treatment year', ylab='Log (alpha stability)', alpha = I(0)) + theme_bw() + geom_boxplot(aes(fill=trt)) + scale_fill_manual(values=c('#ffffff', '#999999')) + scale_y_continuous(breaks=c(0,1,2,3,4,5), labels=c('1','2','4','8','16','32')),
-qplot(year_trt, log_gamma_stab_prod, data = varpart_All_prod, xlab='Post treatment year', ylab='Log (gamma stability)', alpha = I(0)) + theme_bw() + geom_boxplot(aes(fill=trt)) + scale_fill_manual(values=c('#ffffff', '#999999')),
+ggplot(varpart_All_prod, aes(year_trt, avg_richness2, fill=trt)) + xlab('Post treatment year') + ylab('species richness (m-2)') + theme_bw() + geom_boxplot(alpha=0.6) + geom_point(aes(fill=trt), size=2, shape = 21, position = position_jitterdodge()) + scale_fill_manual(values=c('#ffffff', '#999999')) + scale_color_manual(values=c('#ffffff', '#999999')) + scale_y_continuous(breaks=c(0,1,2,3,4,5), labels=c('1','2','4','8','16','32')),
+ggplot(varpart_All_prod, aes(year_trt, beta_invsimpsons, fill=trt)) + xlab('Post treatment year') + ylab('beta diversity (abundance-based)') + theme_bw() + geom_boxplot(alpha=0.6) + geom_point(aes(fill=trt), size=2, shape = 21, position = position_jitterdodge()) + scale_fill_manual(values=c('#ffffff', '#999999')) + scale_color_manual(values=c('#ffffff', '#999999')) + scale_y_continuous(breaks=c(0,1,2,3,4,5), labels=c('1','2','4','8','16','32')),
+ggplot(varpart_All_prod, aes(year_trt, log_alpha_stab_prod, fill=trt)) + xlab('Post treatment year') + ylab('ln (alpha stability)') + theme_bw() + geom_boxplot(alpha=0.6) + geom_point(aes(fill=trt), size=2, shape = 21, position = position_jitterdodge()) + scale_fill_manual(values=c('#ffffff', '#999999')) + scale_color_manual(values=c('#ffffff', '#999999')) + scale_y_continuous(breaks=c(0,1,2,3,4,5), labels=c('1','2','4','8','16','32')),
+ggplot(varpart_All_prod, aes(year_trt, log_gamma_stab_prod, fill=trt)) + xlab('Post treatment year') + ylab('ln (gamma stability)') + theme_bw() + geom_boxplot(alpha=0.6) + geom_point(aes(fill=trt), size=2, shape = 21, position = position_jitterdodge()) + scale_fill_manual(values=c('#ffffff', '#999999')) + scale_color_manual(values=c('#ffffff', '#999999')) + scale_y_continuous(breaks=c(0,1,2,3,4,5), labels=c('1','2','4','8','16','32')),
 nrow=2)
 dev.off()
 system('open FigureS2.pdf')
